@@ -8,6 +8,7 @@ int LedGreen = 5;
 int Trig = 11;
 int Echo = 12;
 int SerMor = 9;
+int Piezo = 8;
 int SenH = A1;
 int SenF = A0;
 
@@ -25,6 +26,7 @@ void setup() {
   pinMode(SenF, INPUT);
 
   // Digital
+  pinMode(Piezo, OUTPUT);
   pinMode(Trig, OUTPUT);
   pinMode(Echo, INPUT);
   motor.attach(SerMor);
@@ -80,6 +82,7 @@ void controlMotor() {
     motor.write(0);
   } else if (distancia < 50) {
     motor.write(0);
+    tone(Piezo, 523, 200);
   } else {
     motor.write(180);
   }

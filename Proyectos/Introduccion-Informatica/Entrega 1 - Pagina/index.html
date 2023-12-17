@@ -1,0 +1,222 @@
+<!--Trabajo realizado por Anais Muñoz Byron Oñate Manuel Ponce Antonio Quilodran Jorge Salazar-->
+<!--Profesor Diego Monsalves-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kit Invernadero</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h3>
+      <nav>
+        <a href="#" id="seccion1-enlace" onclick="mostrarSeccion('seccion1')">Inicio</a>
+        <a href="#" id="seccion2-enlace" onclick="mostrarSeccion('seccion2')">Mediciones de Humedad</a>
+        <a href="#" id="seccion3-enlace" onclick="mostrarSeccion('seccion3')">Eventos Detectados</a>
+        <a href="#" id="seccion4-enlace" onclick="mostrarSeccion('seccion4')">Mediciones de Luminosidad</a>
+        <a href="#" id="seccion5-enlace" onclick="mostrarSeccion('seccion5')">Consultas</a>
+      </nav>
+    </h3>
+    <section id="seccion1">
+      <div class="clock">
+        <div class="time">
+          <span id="hours"></span> :
+          <span id="minutes"></span> :
+          <span id="seconds"></span>
+        </div>
+      </div>
+      <div class="text">
+        <h3>
+          Descripcion del Proyecto
+          <p>El proyecto consiste en desarrollar un prototipo funcional de una solución basada en IoT que permita reducir
+            las mermas en los invernaderos que cultivan flores en la región, tanto para exportación como para consumo
+            nacional. El mercado mundial de flores se ha vuelto muy competitivo, lo que obliga a los invernaderos locales
+            a buscar soluciones para reducir sus costos y aumentar su eficiencia.<br>En definitiva, el proyecto busca
+            ofrecer una solución innovadora y tecnológica que permita reducir las mermas en los invernaderos de flores,
+            mejorar la eficiencia y competitividad de los productores locales en el mercado mundial de flores.</p>
+        </h3>
+      </div>
+      <div class="container">
+        <div class="box">
+          <h3>
+            Niveles de Humedad
+            <p>A la fecha se han realizado 20 mediciones.<br>La medición de humedad más alta registrada es 10%.<br>La
+              medición de humedad más baja registrada es 4%.<br>La medición de humedad promedio es 7°.</p>
+          </h3>
+        </div>
+        <div class="box">
+          <h3>
+            Eventos
+            <p>A la fecha se han detectado 10 eventos.<br>Se han detectado 3 eventos de activación de riego sequedad del
+              suelo.<br>Se han detectado 5 eventos de activación de toldo protector por proximidad por aves.<br>Se han
+              detectado 2 eventos de activación de toldo protector por bajos niveles de luz (noche).</p>
+          </h3>
+        </div>
+      </div>
+    </section>
+    <section id="seccion2">
+      <div class="container">
+        <h3>
+          Niveles de Humedad
+          <p>A la fecha se han realizado 20 mediciones.<br>La medición de humedad más alta registrada es
+            10%.<br>La medición de humedad más baja registrada es 4%.<br>La medición de humedad promedio es 7°.
+          </p>
+        </h3>
+        <h3>
+          <table>
+            <tr>
+              <th><ins>Fecha</ins></th>
+              <th><ins>Hora</ins></th>
+              <th><ins>Humedad Suelo</ins></th>
+            </tr>
+            <tr>
+              <th>10/03</th>
+              <th>06:15:52</th>
+              <th>4%</th>
+            </tr>
+            <tr>
+              <th>12/03</th>
+              <th>10:00:34</th>
+              <th>3%</th>
+            </tr>
+            <tr>
+              <th>14/03</th>
+              <th>09:00:26</th>
+              <th>4%</th>
+            </tr>
+            <tr>
+              <th>16/03</th>
+              <th>16:00:09</th>
+              <th>2%</th>
+            </tr>
+            <tr>
+              <th>18/03</th>
+              <th>08:30:30</th>
+              <th>5%</th>
+            </tr>
+            <tr>
+              <th>20/03</th>
+              <th>18:00:00</th>
+              <th>4%</th>
+            </tr>
+            <tr>
+              <th>22/03</th>
+              <th>07:15:24</th>
+              <th>3%</th>
+            </tr>
+          </table>
+        </h3>
+      </div>
+    </section>
+    <section id="seccion3">
+      <div class="container">
+        <h3>
+          Eventos
+          <p>A la fecha se han detectado 10 eventos.<br>Se han detectado 5 eventos de proximidad.</p>
+        </h3>
+        <h3>
+          <table>
+            <tr>
+              <th><ins>Fecha</ins></th>
+              <th><ins>Hora</ins></th>
+              <th><ins>Distancia</ins></th>
+            </tr>
+            <tr>
+              <th>11/03</th>
+              <th>10:00:00</th>
+              <th>1.6 Mts</th>
+            </tr>
+            <tr>
+              <th>14/03</th>
+              <th>14:00:00</th>
+              <th>3.7 Mts</th>
+            </tr>
+            <tr>
+              <th>17/03</th>
+              <th>17:00:00</th>
+              <th>0.2 Mts</th>
+            </tr>
+            <tr>
+              <th>20/03</th>
+              <th>11:00:00</th>
+              <th>6.1 Mts</th>
+            </tr>
+            <tr>
+              <th>23/03</th>
+              <th>10:00:00</th>
+              <th>5.9 Mts</th>
+            </tr>
+          </table>
+        </h3>
+      </div>
+    </section>
+    <section id="seccion4">
+      <div class="container">
+        <h3>
+          <table>
+            <tr>
+              <th><ins>Fecha</ins></th>
+              <th><ins>Hora Apertura</ins></th>
+              <th><ins>Toldo Hora Cierre</ins></th>
+            </tr>
+            <tr>
+              <th>10/03</th>
+              <th>07:00:00</th>
+              <th>20:00:00</th>
+            </tr>
+            <tr>
+              <th>12/03</th>
+              <th>07:00:05</th>
+              <th>20:00:05</th>
+            </tr>
+            <tr>
+              <th>14/03</th>
+              <th>07:00:10</th>
+              <th>20:00:10</th>
+            </tr>
+            <tr>
+              <th>16/03</th>
+              <th>07:00:15</th>
+              <th>20:00:15</th>
+            </tr>
+            <tr>
+              <th>18/03</th>
+              <th>07:00:20</th>
+              <th>20:00:20</th>
+            </tr>
+            <tr>
+              <th>20/03</th>
+              <th>07:00:25</th>
+              <th>20:00:25</th>
+            </tr>
+            <tr>
+              <th>22/03</th>
+              <th>07:00:30</th>
+              <th>07:00:30</th>
+            </tr>
+          </table>
+        </h3>
+      </div>
+    </section>
+    <section id="seccion5">
+      <h2>Formulario de consultas</h2>
+      <form id="query-form">
+        <div>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="query-response"></div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

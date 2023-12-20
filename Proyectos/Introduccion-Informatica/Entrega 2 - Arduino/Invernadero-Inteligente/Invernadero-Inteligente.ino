@@ -17,7 +17,7 @@ int tiempo;
 int distancia;
 int humedad;
 Servo motor;
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 String estado;
 String detectado;
 

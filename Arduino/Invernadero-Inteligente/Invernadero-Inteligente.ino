@@ -13,7 +13,7 @@ int SenH = A1;
 int SenF = A0;
 
 // Variable
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo motor;
 int humedad;
 int luminicidad;

@@ -1,9 +1,11 @@
+  // iniciarTrigger
   digitalWrite(Trig, LOW);
   delayMicroseconds(2);
   digitalWrite(Trig, HIGH);
   delayMicroseconds(10);
   digitalWrite(Trig, LOW);
 
+  // obtenerDatos
   humedad = map(analogRead(SenH), 0, 1023, 117, 0);
   Serial.println("Humedad: " + String(humedad) + "%");
   luminicidad = analogRead(SenF);
@@ -12,6 +14,7 @@
   distancia = ( tiempo * 0.000001 * 34000.0 )/ 2;
   Serial.println("Distancia: " + String(distancia) + "cm");
 
+  // controlLeds
   digitalWrite(LedRed, LOW);
   digitalWrite(LedYellow, LOW);
   digitalWrite(LedGreen, LOW);
@@ -24,6 +27,7 @@
     digitalWrite(LedGreen, HIGH);
   }
 
+  // controlMotor
   if (luminicidad < 300) {
     motor.write(0);
   } else if (distancia < 50) {
@@ -33,6 +37,7 @@
     motor.write(180);
   }
 
+  // actualizarPantalla
   if (luminicidad < 300) {
     lcd.setCursor(0,0);
     lcd.print("Noche");

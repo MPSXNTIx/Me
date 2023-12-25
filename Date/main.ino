@@ -12,10 +12,7 @@ void setup() {
 
 void loop() {
   mainArduino();
-  secondaryArduino();
   delay(1000);
 }
 
 void mainArduino() {}
-
-void secondaryArduino() {}

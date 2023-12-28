@@ -79,9 +79,9 @@ void mainArduino() {
     }
 
   // controlMotor
-    if (luminicidad < 300) {
+    if ( luminicidad < 300 ) {
       motor.write(0);
-    } else if (distancia < 50) {
+    } else if ( distancia < 50 ) {
       motor.write(0);
       tone(Piezo, 523, 200);
     } else {
@@ -89,7 +89,7 @@ void mainArduino() {
     }
 
   // actualizarPantalla
-    if (luminicidad < 300) {
+    if ( luminicidad < 300 ) {
       lcd.setCursor(0,0);
       lcd.print("Noche");
     } else {
@@ -101,7 +101,7 @@ void mainArduino() {
     lcd.print("//");
 
     int angulo = motor.read();
-    if (angulo == 0) {
+    if ( angulo == 0 ) {
       lcd.setCursor(9,0);
       lcd.print("Cerrado");
     } else {

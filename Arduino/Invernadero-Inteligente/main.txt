@@ -27,6 +27,12 @@
       digitalWrite(LedGreen, HIGH);
     }
 
+    if ( luminicidad < 300) {
+      digitalWrite(LedWhite, HIGH);
+    } else {
+      digitalWrite(LedWhite, LOW);
+    }
+
   // controlMotor
     if (luminicidad < 300) {
       motor.write(0);

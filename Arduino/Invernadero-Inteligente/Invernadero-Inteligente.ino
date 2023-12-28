@@ -2,9 +2,10 @@
 #include <Servo.h>
 
 // Pin
-int LedRed = 7;
-int LedYellow = 6;
-int LedGreen = 5;
+int LedWhite = 7;
+int LedRed = 6;
+int LedYellow = 5;
+int LedBlue = 4;
 int Trig = 11;
 int Echo = 12;
 int SerMor = 9;
@@ -66,14 +67,20 @@ void obtenerDatos() {
 void controlLeds() {
   digitalWrite(LedRed, LOW);
   digitalWrite(LedYellow, LOW);
-  digitalWrite(LedGreen, LOW);
+  digitalWrite(LedBlue, LOW);
   
   if ( humedad < 30 ) {
     digitalWrite(LedRed, HIGH);
   } else if ( humedad < 70 ) {
     digitalWrite(LedYellow, HIGH);
   } else {
-    digitalWrite(LedGreen, HIGH);
+    digitalWrite(LedBlue, HIGH);
+  }
+
+  if ( luminicidad < 300) {
+    digitalWrite(LedWhite, HIGH);
+  } else {
+    digitalWrite(LedWhite, LOW);
   }
 }
 

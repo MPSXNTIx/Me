@@ -77,7 +77,7 @@ void controlLeds() {
     digitalWrite(LedBlue, HIGH);
   }
 
-  if ( luminicidad < 300) {
+  if ( luminicidad < 300 ) {
     digitalWrite(LedWhite, HIGH);
   } else {
     digitalWrite(LedWhite, LOW);

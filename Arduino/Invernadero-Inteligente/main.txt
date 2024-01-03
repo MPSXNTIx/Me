@@ -11,7 +11,7 @@
     luminicidad = analogRead(SenF);
     Serial.println("Luminicidad: " + String(luminicidad));
     tiempo = pulseIn(Echo, HIGH);
-    distancia = ( tiempo * 0.000001 * 34000.0 )/ 2;
+    distancia = (tiempo * 0.000001 * 34000.0)/ 2;
     Serial.println("Distancia: " + String(distancia) + "cm");
 
   // controlLeds
@@ -19,24 +19,24 @@
     digitalWrite(LedYellow, LOW);
     digitalWrite(LedGreen, LOW);
 
-    if ( humedad < 30 ) {
+    if (humedad < 30) {
       digitalWrite(LedRed, HIGH);
-    } else if ( humedad < 70 ) {
+    } else if (humedad < 70) {
       digitalWrite(LedYellow, HIGH);
     } else {
       digitalWrite(LedGreen, HIGH);
     }
 
-    if ( luminicidad < 300 ) {
+    if (luminicidad < 300) {
       digitalWrite(LedWhite, HIGH);
     } else {
       digitalWrite(LedWhite, LOW);
     }
 
   // controlMotor
-    if ( luminicidad < 300 ) {
+    if (luminicidad < 300) {
       motor.write(0);
-    } else if ( distancia < 50 ) {
+    } else if (distancia < 50) {
       motor.write(0);
       tone(Piezo, 523, 200);
     } else {
@@ -44,7 +44,7 @@
     }
 
   // actualizarPantalla
-    if ( luminicidad < 300 ) {
+    if (luminicidad < 300) {
       lcd.setCursor(0,0);
       lcd.print("Noche");
     } else {
@@ -56,7 +56,7 @@
     lcd.print("//");
 
     int angulo = motor.read();
-    if ( angulo == 0 ) {
+    if (angulo == 0) {
       lcd.setCursor(9,0);
       lcd.print("Cerrado");
     } else {

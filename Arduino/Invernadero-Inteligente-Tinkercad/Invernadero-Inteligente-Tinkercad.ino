@@ -2,25 +2,25 @@
 #include <Adafruit_LiquidCrystal.h>
 
 // Pin
-int LedRed = 13;
-int LedOrange = 12;
-int LedYellow = 11;
-int LedGreen = 10;
-int LedBlue = 9;
-int Piezo = 8;
-int Trig = 7;
-int Echo = 6;
-int SerMor = 5;
-int SenH = A0;
-int SenF = A1;
+#define LedRed 13;
+#define LedOrange 12;
+#define LedYellow 11;
+#define LedGreen 10;
+#define LedBlue 9;
+#define Piezo 8;
+#define Trig 7;
+#define Echo 6;
+#define SerMor 5;
+#define SenH A0;
+#define SenF A1;
 
 // Variable
 Adafruit_LiquidCrystal lcd(0);
 Servo motor;
-int humedad;
-int luminicidad;
-int tiempo;
-int distancia;
+int humedad = 0;
+int luminicidad = 0;
+int tiempo = 0;
+int distancia = 0;
 
 void setup() {
   // Analog

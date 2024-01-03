@@ -2,24 +2,24 @@
 #include <Servo.h>
 
 // Pin
-int LedWhite = 7;
-int LedRed = 6;
-int LedYellow = 5;
-int LedBlue = 4;
-int Trig = 11;
-int Echo = 12;
-int SerMor = 9;
-int Piezo = 8;
-int SenH = A1;
-int SenF = A0;
+#define LedWhite 7;
+#define LedRed 6;
+#define LedYellow 5;
+#define LedBlue 4;
+#define Trig 11;
+#define Echo 12;
+#define SerMor 9;
+#define Piezo 8;
+#define SenH A1;
+#define SenF A0;
 
 // Variable
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo motor;
-int humedad;
-int luminicidad;
-int tiempo;
-int distancia;
+int humedad = 0;
+int luminicidad = 0;
+int tiempo = 0;
+int distancia = 0;
 
 void setup() {
   // Analog
@@ -69,15 +69,15 @@ void controlLeds() {
   digitalWrite(LedYellow, LOW);
   digitalWrite(LedBlue, LOW);
   
-  if ( humedad < 30 ) {
+  if (humedad < 30) {
     digitalWrite(LedRed, HIGH);
-  } else if ( humedad < 70 ) {
+  } else if (humedad < 70) {
     digitalWrite(LedYellow, HIGH);
   } else {
     digitalWrite(LedBlue, HIGH);
   }
 
-  if ( luminicidad < 300 ) {
+  if (luminicidad < 300) {
     digitalWrite(LedWhite, HIGH);
   } else {
     digitalWrite(LedWhite, LOW);
@@ -85,9 +85,9 @@ void controlLeds() {
 }
 
 void controlMotor() {
-  if ( luminicidad < 300 ) {
+  if (luminicidad < 300) {
     motor.write(0);
-  } else if ( distancia < 50 ) {
+  } else if (distancia < 50) {
     motor.write(0);
     tone(Piezo, 523, 200);
   } else {
@@ -96,7 +96,7 @@ void controlMotor() {
 }
 
 void actualizarPantalla() {
-  if ( luminicidad < 300 ) {
+  if (luminicidad < 300) {
     lcd.setCursor(0,0);
     lcd.print("Noche");
   } else {
@@ -108,7 +108,7 @@ void actualizarPantalla() {
   lcd.print("//");
   
   int angulo = motor.read();
-  if ( angulo == 0 ) {
+  if (angulo == 0) {
     lcd.setCursor(9,0);
     lcd.print("Cerrado");
   } else {

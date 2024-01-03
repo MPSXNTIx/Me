@@ -61,7 +61,7 @@ void obtenerDatos() {
   humedad = map(analogRead(SenH), 0, 1023, 117, 0);
   luminicidad = analogRead(SenF);
   tiempo = pulseIn(Echo, HIGH);
-  distancia = ( tiempo * 0.000001 * 34000.0 )/ 2;
+  distancia = (tiempo * 0.000001 * 34000.0)/ 2;
 }
 
 void controlLeds() {
